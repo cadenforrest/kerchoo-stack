@@ -24,3 +24,11 @@ Note: I used [asdf](https://asdf-vm.com/) to manage Python versions. You can ins
 You can visit https://localhost:3000/admin and log in with your superuser. After logging in, you can see that the Django admin panel is embedded in the Next.JS app. This is possible because of the rewrites we defined in `next.config.js`, where we proxy requests to `/admin/*` (and `/static/*`) to the Django server.
 
 After logging in, you can visit https://localhost:3000 and see that the session and CSRF token is preserved under the `sessionid` and `csrftoken` cookies. In theory we should be able to now make authenticated requests to the Django server from the Next.JS app.
+
+## TODO
+
+- [ ] Add a `fetch` example in the Next.JS app that makes an authenticated request to the Django server
+- [ ] Dockerize
+- [ ] Postgres
+- [ ] Client side session info fetching (e.g. get user info from Django server and store it in the Next.JS app's state?)
+- [ ] Log in with something other than the admin panel (e.g. a custom login form for plebs)
