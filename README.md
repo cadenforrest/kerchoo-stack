@@ -32,3 +32,4 @@ After logging in, you can visit https://localhost:3000 and see that the session 
 - [ ] Postgres
 - [ ] Client side session info fetching (e.g. get user info from Django server and store it in the Next.JS app's state?)
 - [ ] Log in with something other than the admin panel (e.g. a custom login form for plebs)
+- [ ] Prove that it works in production
