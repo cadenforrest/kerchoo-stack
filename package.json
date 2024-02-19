@@ -1,11 +1,11 @@
 {
-  "name": "next-flask",
+  "name": "next-django",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "flask-dev": "pip install -r requirements.txt && python api/manage.py runserver 5328",
+    "django-dev": "docker-compose up api db",
     "next-dev": "next dev",
-    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
+    "dev": "concurrently \"yarn next-dev\" \"yarn django-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

@@ -1,0 +1,47 @@
+services:
+  api:
+    build:
+      context: ./api
+    volumes:
+      - ./api:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=dev
+    networks:
+      - kerchoo-network
+    depends_on:
+      - db
+      - redis
+    command: "python manage.py runserver 0.0.0.0:8000"
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: kerchoo
+    ports:
+      - "5432:5432"
+    networks:
+      - kerchoo-network
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - kerchoo-network
+    volumes:
+      - redis-data:/data
+
+networks:
+  kerchoo-network:
+    driver: bridge
+
+volumes:
+  db-data:
+  redis-data:
