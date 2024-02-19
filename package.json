@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "django-dev": "docker-compose up api db",
+    "django-manage": "docker-compose run api python manage.py",
     "next-dev": "next dev",
     "dev": "concurrently \"yarn next-dev\" \"yarn django-dev\"",
     "build": "next build",
