@@ -1,7 +1,10 @@
 {
-  "name": "next-django",
+  "name": "create-kerchoo-app",
   "version": "0.1.0",
-  "private": true,
+  "description": "Create Kerchoo App",
+  "bin": {
+    "create-kerchoo-app": "./index.js"
+  },
   "scripts": {
     "django-dev": "docker-compose up api db",
     "django-manage": "docker-compose run api python manage.py",
@@ -11,6 +14,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "create-kerchoo-app"
+  ],
   "dependencies": {
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
