@@ -1,6 +1,6 @@
 {
   "name": "create-kerchoo-app",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Create Kerchoo App",
   "bin": {
     "create-kerchoo-app": "index.js"
