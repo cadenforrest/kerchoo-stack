@@ -3,7 +3,7 @@
   "version": "0.1.3",
   "description": "Create Kerchoo App",
   "bin": {
-    "create-kerchoo-app": "./index.js"
+    "create-kerchoo-app": "index.js"
   },
   "scripts": {
     "django-dev": "docker-compose up api db",
